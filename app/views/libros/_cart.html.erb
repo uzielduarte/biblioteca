@@ -1,0 +1,13 @@
+
+<div>
+  <div>
+    <%= image_tag libro.portada, style:"display: block; width: 200px;" if libro.portada.attached? %>
+  </div>
+  <div>
+    <div><%= link_to libro.nombre, libro_path(libro.id) %></div>
+    <p><%= libro.fecha_publicacion %></p>
+    <h2><%= libro.autor %></h2>
+    <div><%= libro.descripcion %></div>
+    <p><%= libro.cantidad %> Unidades</p>
+  </div>
+</div>
