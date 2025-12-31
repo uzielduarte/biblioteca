@@ -1,4 +1,7 @@
 <div>
+  <div>
+    <%= image_tag @libro.portada if @libro.portada.attached? %>
+  </div>
   <h3><%= @libro.nombre %></h3>
   <p><%= @libro.fecha_publicacion %></p>
   <h2><%= @libro.autor %></h2>

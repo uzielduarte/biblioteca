@@ -40,6 +40,16 @@
   <% end %>
 
   <div>
+    <%= form.label :portada, style: "display: block" %>
+    <%= form.file_field :portada, accept: "image/*" %>
+  </div>
+  <% if libro.portada.attached? %>
+    <div>
+      <%= image_tag libro.portada %>
+    </div>
+  <% end %>
+
+  <div>
     <%= form.submit(libro.new_record? ? "Agregar libro" : "Guardar cambios") %>
   </div>
 <% end %>

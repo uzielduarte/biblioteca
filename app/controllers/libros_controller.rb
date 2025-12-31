@@ -33,8 +33,11 @@ class LibrosController < ApplicationController
   end
 
   def destroy
-    @libro.destroy
-    redirect_to libros_path, notice: "Libro borrado exitosamente."
+    if @libro.destroy
+      redirect_to libros_path, notice: "Libro borrado exitosamente."
+    else
+      redirect_to @libro, alert: "No se puede borrar el libro."
+    end
   end
 
   private
@@ -43,6 +46,6 @@ class LibrosController < ApplicationController
     end
 
     def libro_params
-      params.expect(libro: [ :nombre, :autor, :descripcion, :cantidad, :fecha_publicacion ])
+      params.expect(libro: [ :nombre, :autor, :descripcion, :cantidad, :fecha_publicacion, :portada ])
     end
 end

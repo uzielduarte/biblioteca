@@ -1,4 +1,5 @@
 class Libro < ApplicationRecord
+    has_one_attached :portada
     validates :nombre, presence: true
     validates :autor, presence: true
     validates :descripcion, length: { minimum: 10 }, allow_blank: true
