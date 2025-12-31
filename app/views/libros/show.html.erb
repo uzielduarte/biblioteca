@@ -9,5 +9,5 @@
 <div>
   <%= link_to 'Regresar', libros_path %>
   <%= link_to 'Editar', edit_libro_path(@libro) %>
-  <%= button_to "Eliminar", @libro, method: :delete, data { turbo_confirm: "¿Esta seguro de eliminar este libro?" } %>
+  <%= button_to "Eliminar", @libro, method: :delete, data: { turbo_confirm: "¿Esta seguro de eliminar este libro?" } %>
 </div>

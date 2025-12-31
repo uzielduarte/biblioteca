@@ -15,7 +15,7 @@ class LibrosController < ApplicationController
   def create
     @libro = Libro.new(libro_params)
     if @libro.save
-      redirect_to @libro
+      redirect_to @libro, notice: "Libro agregado exitosamente."
     else
       render :new, status: :unprocessable_entity
     end
@@ -26,7 +26,7 @@ class LibrosController < ApplicationController
 
   def update
     if @libro.update(libro_params)
-      redirect_to @libro
+      redirect_to @libro, notice: "Libro actualizado exitosamente."
     else
       render :edit, status: :unprocessable_entity
     end
@@ -34,7 +34,7 @@ class LibrosController < ApplicationController
 
   def destroy
     @libro.destroy
-    redirect_to libros_path
+    redirect_to libros_path, notice: "Libro borrado exitosamente."
   end
 
   private
