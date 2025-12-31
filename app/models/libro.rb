@@ -9,7 +9,7 @@ class Libro < ApplicationRecord
 
     def fecha_no_futura
         if fecha_publicacion.present? && fecha_publicacion > Date.today
-            errors.add(:fecha_publicacion, "Fecha de publicacion no puede ser futura.")
+            errors.add(:fecha_publicacion, "no puede ser futura.")
         end
     end
 end

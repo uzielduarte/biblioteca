@@ -1,0 +1,13 @@
+<div>
+  <h3><%= @libro.nombre %></h3>
+  <p><%= @libro.fecha_publicacion %></p>
+  <h2><%= @libro.autor %></h2>
+  <div><%= @libro.descripcion %></div>
+  <p><%= @libro.cantidad %> Unidades</p>
+</div>
+
+<div>
+  <%= link_to 'Regresar', libros_path %>
+  <%= link_to 'Editar', edit_libro_path(@libro) %>
+  <%= button_to "Eliminar", @libro, method: :delete, data { turbo_confirm: "¿Esta seguro de eliminar este libro?" } %>
+</div>

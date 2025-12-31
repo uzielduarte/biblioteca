@@ -1,2 +1,13 @@
-<h1>Libros#index</h1>
-<p>Find me in app/views/libros/index.html.erb</p>
+<h1>Libros</h1>
+
+<%= link_to 'Agregar libro', new_libro_path %>
+
+<div>
+  <% @libros.each do |libro| %>
+    <div><%= link_to libro.nombre, libro_path(libro.id) %></div>
+    <p><%= libro.fecha_publicacion %></p>
+    <h2><%= libro.autor %></h2>
+    <div><%= libro.descripcion %></div>
+    <p><%= libro.cantidad %> Unidades</p>
+  <% end %>
+</div>
