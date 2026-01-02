@@ -129,6 +129,7 @@ a {
 
 .libro {
     background-color: white;
+    border-radius: 10px;
 }
 .libro__info{
     padding: 2rem;
@@ -138,9 +139,18 @@ a {
 }
 
 .libro__imagen img{
-    aspect-ratio: 3 / 4;
+    width: 300px;
+    height: 400px;
     object-fit: cover;
     object-position: center;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    margin-top: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .libro__enlace{

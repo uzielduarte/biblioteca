@@ -2,7 +2,7 @@
 <div class="libro">
   <div class="libro__imagen">
     <% if libro.persisted? && libro.portada.attached? %>
-      <%= image_tag libro.portada %>
+      <%= image_tag libro.portada.variant(resize_to_limit: [300, 400]), alt: "Portada de #{libro.nombre}" %>
     <% end %>
   </div>
   <div class="libro__info">
