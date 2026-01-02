@@ -1,16 +1,12 @@
-<div>
-  <div>
-    <%= image_tag @libro.portada if @libro.portada.attached? %>
+<section class="libro-show">
+  <div class="libro-show__cart">
+    
+    <%= render "cart", libro: @libro %>
   </div>
-  <h3><%= @libro.nombre %></h3>
-  <p><%= @libro.fecha_publicacion %></p>
-  <h2><%= @libro.autor %></h2>
-  <div><%= @libro.descripcion %></div>
-  <p><%= @libro.cantidad %> Unidades</p>
-</div>
 
-<div>
-  <%= link_to 'Regresar', libros_path %>
-  <%= link_to 'Editar', edit_libro_path(@libro) %>
-  <%= button_to "Eliminar", @libro, method: :delete, data: { turbo_confirm: "¿Esta seguro de eliminar este libro?" } %>
-</div>
+  <div class="libro-show__enlaces">
+    <%= link_to 'Regresar', libros_path, class:"libro-show__regresar btn" %>
+    <%= button_to "Eliminar", @libro, method: :delete, data: { turbo_confirm: "¿Esta seguro de eliminar este libro?" }, class:"libro-show__eliminar btn" %>
+    <%= link_to 'Editar', edit_libro_path(@libro), class:"libro-show__editar btn" %>
+  </div>
+</section>

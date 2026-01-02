@@ -24,20 +24,23 @@
   </head>
 
   <body>
-    <nav>
-      <%= link_to 'Inicio', root_path %>
-      <%= link_to 'Libros', libros_path %>
-    </nav>
+
+    <header class="cabecera">
+      <nav class="cabecera__navegacion">
+        <%= link_to 'Inicio', root_path, class:"cabecera__navegacion-inicio" %>
+        <%= link_to 'Libros', libros_path, class:"cabecera__navegacion-libros" %>
+      </nav>
+    </header>
     
     <div><%= flash[:notice] %></div>
     <div><%= flash[:alert] %></div>
 
-    <main>
+    <main class="contenedor">
       <%= yield %>
     </main>
 
-    <footer>
-      <p>Proyecto CRUD Ruby on Rails 2026</p>
+    <footer class="piez">
+      <p class="piez__texto">Proyecto CRUD Ruby on Rails 2026, Uziel Duarte.</p>
     </footer>
   </body>
 </html>

@@ -1,13 +1,14 @@
 
-<div>
-  <div>
-    <%= image_tag libro.portada, style:"display: block; width: 200px;" if libro.portada.attached? %>
+<div class="libro">
+  <div class="libro__imagen">
+    <%= image_tag libro.portada if libro.portada.attached? %>
   </div>
-  <div>
-    <div><%= link_to libro.nombre, libro_path(libro.id) %></div>
-    <p><%= libro.fecha_publicacion %></p>
-    <h2><%= libro.autor %></h2>
-    <div><%= libro.descripcion %></div>
-    <p><%= libro.cantidad %> Unidades</p>
+  <div class="libro__info">
+    <h1 class="libro__nombre"><%= libro.nombre %></h1>
+    <p class="libro__fecha"><%= libro.fecha_publicacion %></p>
+    <h2 class="libro__autor"><%= libro.autor %></h2>
+    <div class="libro__descripcion"><%= libro.descripcion %></div>
+    <p class="libro__cantidad"><%= libro.cantidad %> Unidades</p>
+    <div><%= link_to 'Ver mas', libro_path(libro.id), class:"libro__enlace" %></div>
   </div>
 </div>

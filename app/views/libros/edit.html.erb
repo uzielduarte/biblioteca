@@ -1,4 +1,8 @@
-<h1>Editar datos de libro</h1>
+<section class="libro-edit">
+  <h1 class="libro-edit__titulo">Editar datos de libro</h1>
 
-<%= render 'form', libro: @libro %>
-<%= link_to 'Cancelar', @libro %>
+  <%= render 'form', libro: @libro %>
+  <div class="libro-edit__contenedor-cancelar">
+    <%= link_to 'Cancelar', @libro, class:"libro-edit__cancelar btn" %>
+  </div>
+</section>

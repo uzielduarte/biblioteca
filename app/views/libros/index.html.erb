@@ -1,9 +1,13 @@
-<h1>Libros</h1>
+<section class="libros">
+  <h1 class="libros__titulo">Libros</h1>
 
-<%= link_to 'Agregar libro', new_libro_path %>
+  <div class="libros__agregar">
+    <%= link_to 'Agregar libro', new_libro_path %>
+  </div>
 
-<div>
-  <% @libros.each do |libro| %>
-    <%= render "cart", libro: libro %>
-  <% end %>
-</div>
+  <div class="libros__carts">
+    <% @libros.each do |libro| %>
+      <%= render "cart", libro: libro %>
+    <% end %>
+  </div>
+</section>

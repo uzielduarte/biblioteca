@@ -1,5 +1,5 @@
-<%= form_with model: libro do |form| %>
-  <div>
+<%= form_with model: libro, class:"formulario-libro" do |form| %>
+  <div class="formulario-libro__nombre">
     <%= form.label :nombre %>
     <%= form.text_field :nombre, placeholder: "Nombre", required: Libro.validators_on(:nombre).any? %>
   </div>
@@ -7,7 +7,7 @@
     <p><%= form.object.errors[:nombre].first %></p>
   <% end %>
 
-  <div>
+  <div class="formulario-libro__autor">
     <%= form.label :autor %>
     <%= form.text_field :autor, placeholder: "Autor", required: Libro.validators_on(:autor).any? %>
   </div>
@@ -15,7 +15,7 @@
     <p><%= form.object.errors[:autor].first %></p>
   <% end %>
 
-  <div>
+  <div class="formulario-libro__descripcion">
     <%= form.label :descripcion %>
     <%= form.text_area :descripcion, rows: 4, required: Libro.validators_on(:descripcion).any? %>
   </div>
@@ -23,7 +23,7 @@
     <p><%= form.object.errors[:descripcion].first %></p>
   <% end %>
 
-  <div>
+  <div class="formulario-libro__cantidad">
     <%= form.label :cantidad %>
     <%= form.number_field :cantidad, required: Libro.validators_on(:cantidad).any? %>
   </div>
@@ -31,7 +31,7 @@
     <p><%= form.object.errors[:cantidad].first %></p>
   <% end %>
 
-  <div>
+  <div class="formulario-libro__fecha">
     <%= form.label :fecha_publicacion %>
     <%= form.date_field :fecha_publicacion, required: Libro.validators_on(:fecha_publicacion).any? %>
   </div>
@@ -39,8 +39,8 @@
     <p><%= form.object.errors[:fecha_publicacion].first %></p>
   <% end %>
 
-  <div>
-    <%= form.label :portada, style: "display: block" %>
+  <div class="formulario-libro__portada">
+    <%= form.label :portada %>
     <%= form.file_field :portada, accept: "image/*" %>
   </div>
   <% if libro.portada.attached? %>
@@ -49,7 +49,7 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="formulario-libro__submit">
     <%= form.submit(libro.new_record? ? "Agregar libro" : "Guardar cambios") %>
   </div>
 <% end %>
