@@ -8,8 +8,8 @@ El proyecto sigue un diseño RESTful basado en recursos, utilizando las acciones
 
 Tecnologías y versiones
 
-**- Ruby: 3.4.8**
-**- Rails: 8.1.1**
+- **Ruby: 3.4.8**
+- **Rails: 8.1.1**
 - Base de datos: SQLite (por defecto en desarrollo)
 - Sistema operativo: Ubuntu 24.04 (WSL en Windows)
 
