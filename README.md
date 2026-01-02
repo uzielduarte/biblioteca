@@ -54,12 +54,12 @@ El proyecto sigue un diseño RESTful basado en recursos, utilizando las acciones
 -Tests automatizados
 -Mejoras en las interfaces de usuario
 
-#Cómo ejecutar el proyecto
+**Cómo ejecutar el proyecto**
 Desde la terminar (estando en la raíz del proyecto), ejecutar los siguiente comandos, y visitar localhost.
 
--clonar este repositorio
--bundle install
--bin/rails db:create
--bin/rails db:migrate
--bin/rails server
--visitar http://localhost:3000
+1. clonar este repositorio
+2. bundle install
+3. bin/rails db:create
+3. bin/rails db:migrate
+4. bin/rails server
+5. visitar http://localhost:3000
