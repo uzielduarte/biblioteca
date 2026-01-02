@@ -230,3 +230,21 @@ a {
     display: flex;
     justify-content: end;
 }
+.flash{
+    padding: 1rem 1rem 0 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.flash__notice,
+.flash__alert {
+    display: inline-block;
+    color: white;
+    font-weight: 400;
+    border-radius: 5px;
+}
+.flash__notice  {
+    background-color: green;
+}
+.flash__alert {
+    background-color: red;
+}
