@@ -1,7 +1,9 @@
 
 <div class="libro">
   <div class="libro__imagen">
-    <%= image_tag libro.portada if libro.portada.attached? %>
+    <% if libro.persisted? && libro.portada.attached? %>
+      <%= image_tag libro.portada %>
+    <% end %>
   </div>
   <div class="libro__info">
     <h1 class="libro__nombre"><%= libro.nombre %></h1>
