@@ -1,24 +1,65 @@
-# README
+Descripción
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Proyecto de ejemplo que implementa un CRUD básico del recurso Libro, desarrollado con Ruby on Rails siguiendo el patrón Model–View–Controller (MVC) y las convenciones de Rails.
 
-Things you may want to cover:
+El objetivo del proyecto es demostrar el flujo completo de una aplicación Rails sencilla, el uso de rutas RESTful, Active Record y buenas prácticas básicas.
 
-* Ruby version
+El proyecto sigue un diseño RESTful basado en recursos, utilizando las acciones estándar de Rails para operaciones CRUD.
 
-* System dependencies
+Tecnologías y versiones
 
-* Configuration
+- **Ruby: 3.4.8**
+- **Rails: 8.1.1**
+- Base de datos: SQLite (por defecto en desarrollo)
+- Sistema operativo: Ubuntu 24.04 (WSL en Windows)
 
-* Database creation
+Componentes principales
 
-* Database initialization
+- Active Record
+    Modelado de datos
+    Validaciones
+    Migraciones
+- Active Storage
+    Gestión de archivos asociados al recurso
 
-* How to run the test suite
+Funcionalidades
 
-* Services (job queues, cache servers, search engines, etc.)
+- Crear libros
+- Listar libros
+- Ver detalle de un libro
+- Editar libros
+- Eliminar libros
+- Validaciones básicas del modelo
 
-* Deployment instructions
+Arquitectura y convenciones
 
-* ...
+- Patrón MVC (Model–View–Controller)
+- Rutas RESTful usando 'resources'
+- Convenciones de Rails:
+- Modelos en singular
+- Tablas en plural
+- Controladores en plural
+- Controladores delgados y lógica de negocio en el modelo
+
+Estructura de ramas
+
+- main: rama de producción
+- desarrollo: rama de trabajo y nuevas funcionalidades
+
+Posibles mejoras futuras
+
+- Autenticación de usuarios
+- Autorización por roles (restringir funcionalidades como Eliminar, Actualizar, y Agregar)
+- Tablas con Paginación y búsqueda por filtro
+- Tests automatizados
+- Mejoras en las interfaces de usuario
+
+**Cómo ejecutar el proyecto**
+Desde la terminar (estando en la raíz del proyecto), ejecutar los siguiente comandos, y visitar localhost.
+
+1. clonar este repositorio
+2. bundle install
+3. bin/rails db:create
+3. bin/rails db:migrate
+4. bin/rails server
+5. visitar http://localhost:3000

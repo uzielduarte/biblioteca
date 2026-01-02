@@ -1,0 +1,8 @@
+<section class="libro-new">
+  <h1 class="libro-new__titulo">Libro nuevo</h1>
+
+  <%= render 'form', libro: @libro %>
+  <div class="libro-new__contenedor-cancelar">
+    <%= link_to 'Cencelar', libros_path, class:"libro-new__cancelar btn" %>
+  </div>
+</section>

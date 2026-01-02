@@ -1,0 +1,12 @@
+<section class="libro-show">
+  <div class="libro-show__cart">
+    
+    <%= render "cart", libro: @libro %>
+  </div>
+
+  <div class="libro-show__enlaces">
+    <%= link_to 'Regresar', libros_path, class:"libro-show__regresar btn" %>
+    <%= button_to "Eliminar", @libro, method: :delete, data: { turbo_confirm: "¿Esta seguro de eliminar este libro?" }, class:"libro-show__eliminar btn" %>
+    <%= link_to 'Editar', edit_libro_path(@libro), class:"libro-show__editar btn" %>
+  </div>
+</section>
