@@ -1,4 +1,4 @@
-#Descripción
+Descripción
 
 Proyecto de ejemplo que implementa un CRUD básico del recurso Libro, desarrollado con Ruby on Rails siguiendo el patrón Model–View–Controller (MVC) y las convenciones de Rails.
 
@@ -6,14 +6,14 @@ El objetivo del proyecto es demostrar el flujo completo de una aplicación Rails
 
 El proyecto sigue un diseño RESTful basado en recursos, utilizando las acciones estándar de Rails para operaciones CRUD.
 
-#Tecnologías y versiones
+Tecnologías y versiones
 
 **- Ruby: 3.4.8**
 **- Rails: 8.1.1**
 - Base de datos: SQLite (por defecto en desarrollo)
 - Sistema operativo: Ubuntu 24.04 (WSL en Windows)
 
-#Componentes principales
+Componentes principales
 
 - Active Record
     Modelado de datos
@@ -22,7 +22,7 @@ El proyecto sigue un diseño RESTful basado en recursos, utilizando las acciones
 - Active Storage
     Gestión de archivos asociados al recurso
 
-#Funcionalidades
+Funcionalidades
 
 - Crear libros
 - Listar libros
@@ -31,7 +31,7 @@ El proyecto sigue un diseño RESTful basado en recursos, utilizando las acciones
 - Eliminar libros
 - Validaciones básicas del modelo
 
-#Arquitectura y convenciones
+Arquitectura y convenciones
 
 - Patrón MVC (Model–View–Controller)
 - Rutas RESTful usando 'resources'
@@ -41,12 +41,12 @@ El proyecto sigue un diseño RESTful basado en recursos, utilizando las acciones
 - Controladores en plural
 - Controladores delgados y lógica de negocio en el modelo
 
-#Estructura de ramas
+Estructura de ramas
 
 - main: rama de producción
 - desarrollo: rama de trabajo y nuevas funcionalidades
 
-#Posibles mejoras futuras
+Posibles mejoras futuras
 
 - Autenticación de usuarios
 - Autorización por roles (restringir funcionalidades como Eliminar, Actualizar, y Agregar)
