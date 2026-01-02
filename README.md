@@ -8,51 +8,51 @@ El proyecto sigue un diseño RESTful basado en recursos, utilizando las acciones
 
 #Tecnologías y versiones
 
-**-Ruby: 3.4.8
--Rails: 8.1.1**
--Base de datos: SQLite (por defecto en desarrollo)
--Sistema operativo: Ubuntu 24.04 (WSL en Windows)
+**- Ruby: 3.4.8**
+**- Rails: 8.1.1**
+- Base de datos: SQLite (por defecto en desarrollo)
+- Sistema operativo: Ubuntu 24.04 (WSL en Windows)
 
 #Componentes principales
 
--Active Record
+- Active Record
     Modelado de datos
     Validaciones
     Migraciones
--Active Storage
+- Active Storage
     Gestión de archivos asociados al recurso
 
 #Funcionalidades
 
--Crear libros
--Listar libros
--Ver detalle de un libro
--Editar libros
--Eliminar libros
--Validaciones básicas del modelo
+- Crear libros
+- Listar libros
+- Ver detalle de un libro
+- Editar libros
+- Eliminar libros
+- Validaciones básicas del modelo
 
 #Arquitectura y convenciones
 
--Patrón MVC (Model–View–Controller)
--Rutas RESTful usando 'resources'
--Convenciones de Rails:
--Modelos en singular
--Tablas en plural
--Controladores en plural
--Controladores delgados y lógica de negocio en el modelo
+- Patrón MVC (Model–View–Controller)
+- Rutas RESTful usando 'resources'
+- Convenciones de Rails:
+- Modelos en singular
+- Tablas en plural
+- Controladores en plural
+- Controladores delgados y lógica de negocio en el modelo
 
 #Estructura de ramas
 
--main: rama de producción
--desarrollo: rama de trabajo y nuevas funcionalidades
+- main: rama de producción
+- desarrollo: rama de trabajo y nuevas funcionalidades
 
 #Posibles mejoras futuras
 
--Autenticación de usuarios
--Autorización por roles (restringir funcionalidades como Eliminar, Actualizar, y Agregar)
--Tablas con Paginación y búsqueda por filtro
--Tests automatizados
--Mejoras en las interfaces de usuario
+- Autenticación de usuarios
+- Autorización por roles (restringir funcionalidades como Eliminar, Actualizar, y Agregar)
+- Tablas con Paginación y búsqueda por filtro
+- Tests automatizados
+- Mejoras en las interfaces de usuario
 
 **Cómo ejecutar el proyecto**
 Desde la terminar (estando en la raíz del proyecto), ejecutar los siguiente comandos, y visitar localhost.
