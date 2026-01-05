@@ -68,4 +68,4 @@ group :test do
 end
 
 gem "pg"
-gem "google-cloud-storage", "~> 2.3"
+gem "google-cloud-storage", "~> 1.17"
