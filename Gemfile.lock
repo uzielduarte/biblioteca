@@ -157,7 +157,7 @@ GEM
       base64 (~> 0.2)
       faraday (>= 1.0, < 3.a)
     google-cloud-errors (1.5.0)
-    google-cloud-storage (1.57.1)
+    google-cloud-storage (1.58.0)
       addressable (~> 2.8)
       digest-crc (~> 0.4)
       google-apis-core (>= 0.18, < 2)
@@ -278,7 +278,7 @@ GEM
     psych (5.3.1)
       date
       stringio
-    public_suffix (7.0.0)
+    public_suffix (7.0.2)
     puma (7.1.0)
       nio4r (~> 2.0)
     raabro (1.4.0)
@@ -462,7 +462,7 @@ DEPENDENCIES
   capybara
   debug
   dotenv-rails
-  google-cloud-storage (~> 1.17)
+  google-cloud-storage (~> 1.58)
   image_processing (~> 1.2)
   importmap-rails
   jbuilder
