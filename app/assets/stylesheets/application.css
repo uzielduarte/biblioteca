@@ -226,7 +226,8 @@ a {
 .formulario-libro__autor,
 .formulario-libro__cantidad,
 .formulario-libro__fecha,
-.formulario-libro__portada {
+.formulario-libro__portada,
+.formulario-libro__categoria {
     display: flex;
     flex-direction: column;
     gap: .5rem;
