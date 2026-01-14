@@ -40,7 +40,7 @@
       <% if flash[:alert].present? %>
         <div class="flash__alert">
           <% Array(flash[:alert]).each do |mensaje| %>
-            <p style="margin-bottom: 5px;"><%= mensaje %></p>
+            <p><%= mensaje %></p>
           <% end %>
         </div>
       <% end %>

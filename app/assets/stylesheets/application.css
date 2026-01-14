@@ -261,6 +261,8 @@ a {
 .flash__notice  {
     background-color: green;
 }
-.flash__alert {
+.flash__alert p {
     background-color: red;
+    padding: .5rem;
+    border-radius: 4px;
 }
