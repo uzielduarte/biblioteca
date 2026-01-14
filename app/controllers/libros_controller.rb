@@ -10,6 +10,7 @@ class LibrosController < ApplicationController
 
   def new
     @libro = Libro.new
+    @categorias = Categoria.order(:nombre)
   end
 
   def create
@@ -17,26 +18,35 @@ class LibrosController < ApplicationController
     if @libro.save
       redirect_to @libro, notice: "Libro agregado exitosamente."
     else
+      @categorias = Categoria.order(:nombre)
+      flash.now[:alert] = @libro.errors.full_messages
       render :new, status: :unprocessable_entity
     end
   end
 
   def edit
+    @categorias = Categoria.order(:nombre)
   end
 
   def update
     if @libro.update(libro_params)
       redirect_to @libro, notice: "Libro actualizado exitosamente."
     else
+      @categorias = Categoria.order(:nombre)
+      flash.now[:alert] = @libro.errors.full_messages
       render :edit, status: :unprocessable_entity
     end
   end
 
   def destroy
-    if @libro.destroy
-      redirect_to libros_path, notice: "Libro borrado exitosamente."
+    if @libro.cantidad <= 2
+      if @libro.destroy
+        redirect_to libros_path, notice: "Libro borrado exitosamente."
+      else
+        redirect_to @libro, alert: "No se puede borrar el libro."
+      end
     else
-      redirect_to @libro, alert: "No se puede borrar el libro."
+      redirect_to @libro, alert: "Para borrar un libro su cantidad debe ser menor o igual a 2."
     end
   end
 
@@ -46,6 +56,6 @@ class LibrosController < ApplicationController
     end
 
     def libro_params
-      params.expect(libro: [ :nombre, :autor, :descripcion, :cantidad, :fecha_publicacion, :portada ])
+      params.expect(libro: [ :nombre, :autor, :descripcion, :cantidad, :fecha_publicacion, :portada, :categoria_id ])
     end
 end

@@ -7,7 +7,7 @@
 
   <div class="libros__carts">
     <% @libros.each do |libro| %>
-      <%= render "cart", libro: libro %>
+      <%= render "cart", libro: libro, show_link: true %>
     <% end %>
   </div>
 </section>
