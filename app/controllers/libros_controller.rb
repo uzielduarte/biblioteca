@@ -28,15 +28,20 @@ class LibrosController < ApplicationController
     if @libro.update(libro_params)
       redirect_to @libro, notice: "Libro actualizado exitosamente."
     else
+      flash.now[:alert] = @libro.errors.full_messages
       render :edit, status: :unprocessable_entity
     end
   end
 
   def destroy
-    if @libro.destroy
-      redirect_to libros_path, notice: "Libro borrado exitosamente."
+    if @libro.cantidad <= 2
+      if @libro.destroy
+        redirect_to libros_path, notice: "Libro borrado exitosamente."
+      else
+        redirect_to @libro, alert: "No se puede borrar el libro."
+      end
     else
-      redirect_to @libro, alert: "No se puede borrar el libro."
+      redirect_to @libro, alert: "Para borrar un libro su cantidad debe ser menor o igual a 2."
     end
   end
 
