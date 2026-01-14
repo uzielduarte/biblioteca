@@ -33,8 +33,17 @@
     </header>
     
     <div class="flash">
-      <div class="flash__notice"><%= flash[:notice] %></div>
-      <div class="flash__alert"><%= flash[:alert] %></div>
+      <% if flash[:notice].present? %>
+        <div class="flash__notice"><%= flash[:notice] %></div>
+      <% end %>
+
+      <% if flash[:alert].present? %>
+        <div class="flash__alert">
+          <% Array(flash[:alert]).each do |mensaje| %>
+            <p style="margin-bottom: 5px;"><%= mensaje %></p>
+          <% end %>
+        </div>
+      <% end %>
     </div>
 
     <main class="contenedor">
