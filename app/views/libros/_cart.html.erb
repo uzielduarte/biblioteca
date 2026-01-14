@@ -7,6 +7,7 @@
   </div>
   <div class="libro__info">
     <h1 class="libro__nombre"><%= libro.nombre %></h1>
+    <p><strong>Categoría:</strong><%= libro.categoria&.nombre || "Sin categoría" %></p>
     <p class="libro__fecha"><%= libro.fecha_publicacion %></p>
     <h2 class="libro__autor"><%= libro.autor %></h2>
     <div class="libro__descripcion"><%= libro.descripcion %></div>

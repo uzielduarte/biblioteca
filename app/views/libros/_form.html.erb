@@ -14,6 +14,11 @@
     <%= form.text_area :descripcion, rows: 4, required: Libro.validators_on(:descripcion).any? %>
   </div>
 
+  <div class="formulario-libro__categoria">
+    <%= form.label :categoria_id, "Categoría" %>
+    <%= form.collection_select :categoria_id, @categorias, :id, :nombre, prompt: "Seleccione una categoría", required: Libro.validators_on(:cantidad).any? %>
+  </div>
+
   <div class="formulario-libro__cantidad">
     <%= form.label :cantidad %>
     <%= form.number_field :cantidad, required: Libro.validators_on(:cantidad).any? %>

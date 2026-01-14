@@ -10,6 +10,7 @@ class LibrosController < ApplicationController
 
   def new
     @libro = Libro.new
+    @categorias = Categoria.order(:nombre)
   end
 
   def create
@@ -17,17 +18,21 @@ class LibrosController < ApplicationController
     if @libro.save
       redirect_to @libro, notice: "Libro agregado exitosamente."
     else
+      @categorias = Categoria.order(:nombre)
+      flash.now[:alert] = @libro.errors.full_messages
       render :new, status: :unprocessable_entity
     end
   end
 
   def edit
+    @categorias = Categoria.order(:nombre)
   end
 
   def update
     if @libro.update(libro_params)
       redirect_to @libro, notice: "Libro actualizado exitosamente."
     else
+      @categorias = Categoria.order(:nombre)
       flash.now[:alert] = @libro.errors.full_messages
       render :edit, status: :unprocessable_entity
     end
@@ -51,6 +56,6 @@ class LibrosController < ApplicationController
     end
 
     def libro_params
-      params.expect(libro: [ :nombre, :autor, :descripcion, :cantidad, :fecha_publicacion, :portada ])
+      params.expect(libro: [ :nombre, :autor, :descripcion, :cantidad, :fecha_publicacion, :portada, :categoria_id ])
     end
 end
